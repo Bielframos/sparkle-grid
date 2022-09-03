@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-size-min: 1;
+  --font-size-max: 1.125;
+  --font-size-grow-from: 75;
+  --font-size-grow-to: 90;
+  --_font-size-min-in-rems: calc(var(--font-size-min) * 1rem);
+  --_font-size-max-in-rems: calc(var(--font-size-max) * 1rem);
+  --_font-size-grow-from-in-rems: calc(var(--font-size-grow-from) * 1rem);
+  --_font-size-grow-to-in-rems: calc(var(--font-size-grow-to) * 1rem);
+
+  font-size: clamp(
+    var(--_font-size-min-in-rems),
+    var(--_font-size-min-in-rems) +
+      (var(--font-size-max) - var(--font-size-min)) *
+      (
+        (100vw - var(--_font-size-grow-from-in-rems)) /
+          (var(--font-size-grow-to) - var(--font-size-grow-from))
+      ),
+    var(--_font-size-max-in-rems)
+  );
+}
