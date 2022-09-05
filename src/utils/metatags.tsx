@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function Metatags() {
   return (
@@ -10,20 +10,13 @@ export default function Metatags() {
       ></meta>
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
       <meta name='author' content='Gabriel França' />
-
-      <meta property='og:site_name' content='My Default Project' />
-
       <meta
         name='description'
         content='My humble stack to build amazing things, developed with care and lots of love ready to put big projects on top.'
       />
       <meta name='keywords' content='Web, Development' />
-
-      <link rel='preconnect' href='https://fonts.googleapis.com' />
-      <link rel='preconnect' href='https://fonts.gstatic.com' />
-
       <link rel='shortcut icon' href='/fav-icon.svg' type='image/x-icon' />
-
+      <meta property='og:site_name' content='My Default Project' />
       <meta
         property='og:image'
         itemProp='image'
@@ -38,6 +31,5 @@ export default function Metatags() {
         content='My humble stack to build amazing things, developed with care and lots of love ready to put big projects on top.'
       />
     </>
-  );
+  )
 }
-
